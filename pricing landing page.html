@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Product Pricing landing</title>
+  <link rel="stylesheet" type="text/css" href="../price/styles.css">
+
+</head>
+<body>
+  <header>
+    <h1>Fictional Product Pricing</h1>
+  </header>
+
+  <section>
+    <div class="pricing-card">
+      <h2>Basic Plan</h2>
+      <p><span class="currency">$</span>19.99/<span class="unit">month</span></p>
+      <div class="toggle-label">
+        <label>Yearly Billing</label>
+        <input type="checkbox" class="toggle-input">
+      </div>
+      <ul>
+        <li>Feature 1</li>
+        <li>Feature 2</li>
+        <li>Feature 3</li>
+      </ul>
+      <button>Select Plan</button>
+    </div>
+
+    <!-- Additional pricing cards for other plans -->
+
+  </section>
+
+  <script>
+    const toggleInputs = document.querySelectorAll('.toggle-input');
+
+    toggleInputs.forEach(input => {
+      input.addEventListener('change', function () {
+        // You can add logic here to update pricing based on yearly/monthly selection
+        console.log('Toggle state:', this.checked ? 'Yearly' : 'Monthly');
+      });
+    });
+  </script>
+</body>
+</html>
